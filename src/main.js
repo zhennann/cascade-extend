@@ -1,3 +1,5 @@
+import extend from '@zhennann/extend';
+
 export default function cascadeExtend({ scope, source, name }) {
   if (!source || !name) return null;
   const keys = Object.keys(source).filter(key => {
