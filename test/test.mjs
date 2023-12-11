@@ -17,6 +17,12 @@ const source = {
         scene: 'pc',
         name: 'yang',
     },
+    ebParams_pc: {
+        size: 'large',
+        scene: 'pc',
+        name: 'kevin',
+        group: true,
+    },
 }
 const res = cascadeExtend({ scope, source, name: 'ebParams' });
 console.log(res);
