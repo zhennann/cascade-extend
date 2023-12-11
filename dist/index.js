@@ -203,6 +203,9 @@ function cascadeExtend(_ref) {
   });
   if (keys.length === 0) return null;
   if (keys.length === 1 && keys[0] === name) return source[keys[0]];
+  keys.sort(function (a, b) {
+    return a.split('_').length - b.split('_').length;
+  });
   var result = {};
   var nameLength = name.length;
   var _iterator = _createForOfIteratorHelper(keys),
