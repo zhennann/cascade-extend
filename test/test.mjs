@@ -24,5 +24,10 @@ const source = {
         group: true,
     },
 }
-const res = cascadeExtend({ scope, source, name: 'ebParams' });
+console.log(new Date());
+let res;
+for (let i = 0; i < 100; i++) {
+    res = cascadeExtend({ scope, source, name: 'ebParams' });
+}
+console.log(new Date());
 console.log(res);
