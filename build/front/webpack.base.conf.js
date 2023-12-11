@@ -8,7 +8,7 @@ function resolve(dir) {
 
 module.exports = {
   entry: {
-    index: resolve('src/main.js'),
+    index: resolve('src/main.mjs'),
   },
   output: {
     path: config.build.assetsRoot,
@@ -45,6 +45,11 @@ module.exports = {
       },
       {
         test: /\.js$/,
+        loader: 'babel-loader',
+        include: [resolve('src')],
+      },
+      {
+        test: /\.mjs$/,
         loader: 'babel-loader',
         include: [resolve('src')],
       },
