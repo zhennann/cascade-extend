@@ -41,7 +41,7 @@ let resKeys;
 let res;
 for (let i = 0; i < 100; i++) {
   resKeys = cascadeExtendKeys(scope, source, 'ebParams');
-  res = cascadeExtend({ scope, source, name: 'ebParams' });
+  res = cascadeExtend(scope, source, 'ebParams');
 }
 console.log(new Date());
 console.log(resKeys);
