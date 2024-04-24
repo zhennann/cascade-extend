@@ -3,26 +3,25 @@ import { extend } from '@cabloy/extend';
 export function cascadeExtendKeys(
   scope: object,
   source: object | undefined,
-  name?: string,
+  prefix?: string,
   sep: string = '_',
 ): string[] | undefined {
   if (!source) return undefined;
-  if (name === undefined) name = '';
+  if (prefix === undefined) prefix = '';
   // filter
   let keys = Object.keys(source).filter(key => {
-    return key === name || key.indexOf(name + sep) === 0;
+    return key === prefix || key.indexOf(prefix + sep) === 0;
   });
   if (keys.length === 0) return undefined;
-  if (keys.length === 1 && keys[0] === name) return keys;
+  if (keys.length === 1 && keys[0] === prefix) return keys;
   // sort
   keys.sort((a, b) => {
     return a.split('_').length - b.split('_').length;
   });
   // filter
-  const nameLength = name.length;
   keys = keys.filter(key => {
-    if (key === name) return true;
-    const parts = key.substring(nameLength + 1).split(sep);
+    if (key === prefix) return true;
+    const parts = key.substring(prefix.length + 1).split(sep);
     return parts.every(part => !!scope[part]);
   });
   // ok
