@@ -23,6 +23,9 @@ const source = {
     name: 'kevin_pc',
     group: true,
   },
+  ebParams_mobile_view: {
+    name: 'kevin_mobile_view',
+  },
   ebParams_view: {
     name: 'kevin_view',
   },
@@ -31,7 +34,7 @@ const source = {
     scene: 'pc',
   },
 };
-//{ size: 'small', scene: 'mobile', name: 'kevin_view', group: true }
+//{ size: 'small', scene: 'mobile', name: 'kevin_mobile_view', group: true }
 
 console.log(new Date());
 let resKeys;

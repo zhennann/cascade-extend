@@ -21,7 +21,7 @@ export function cascadeExtendKeys(
   // filter
   keys = keys.filter(key => {
     if (key === prefix) return true;
-    const parts = key.substring(prefix.length + 1).split(sep);
+    const parts = key.substring(prefix!.length + 1).split(sep);
     return parts.every(part => !!scope[part]);
   });
   // ok
