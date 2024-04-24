@@ -1,4 +1,4 @@
-import cascadeExtend from '../src/main.mjs';
+import { cascadeExtend } from '../dist/index.js';
 
 const scope = {
     group: true,

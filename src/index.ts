@@ -1,6 +1,6 @@
-import extend from '@zhennann/extend';
+import {extend} from '@cabloy/extend';
 
-export default function cascadeExtend({ scope, source, name }) {
+export function cascadeExtend({ scope, source, name }) {
   if (!source || !name) return null;
   // filter
   const keys = Object.keys(source).filter(key => {
