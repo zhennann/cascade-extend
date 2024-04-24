@@ -20,10 +20,19 @@ const source = {
   ebParams_pc: {
     size: 'large',
     scene: 'pc',
-    name: 'kevin',
+    name: 'kevin_pc',
     group: true,
   },
+  ebParams_view: {
+    name: 'kevin_view',
+  },
+  ebParams_pc_view: {
+    size: 'large',
+    scene: 'pc',
+  },
 };
+//{ size: 'small', scene: 'mobile', name: 'kevin_view', group: true }
+
 console.log(new Date());
 let res;
 for (let i = 0; i < 100; i++) {
