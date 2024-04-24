@@ -1,4 +1,4 @@
-import { cascadeExtend } from '../dist/index.js';
+import { cascadeExtendKeys, cascadeExtend } from '../dist/index.js';
 
 const scope = {
   group: true,
@@ -34,9 +34,12 @@ const source = {
 //{ size: 'small', scene: 'mobile', name: 'kevin_view', group: true }
 
 console.log(new Date());
+let resKeys;
 let res;
 for (let i = 0; i < 100; i++) {
+  resKeys = cascadeExtendKeys(scope, source, 'ebParams');
   res = cascadeExtend({ scope, source, name: 'ebParams' });
 }
 console.log(new Date());
+console.log(resKeys);
 console.log(res);
