@@ -1,10 +1,12 @@
 import { extend } from '@cabloy/extend';
 
+const __SepDefault = '.';
+
 export function cascadeExtendKeys(
   scope: object,
   source: object | undefined,
   prefix?: string,
-  sep: string = '_',
+  sep: string = __SepDefault,
 ): string[] | undefined {
   if (!source) return undefined;
   if (prefix === undefined) prefix = '';
@@ -16,7 +18,7 @@ export function cascadeExtendKeys(
   if (keys.length === 1 && keys[0] === prefix) return keys;
   // sort
   keys.sort((a, b) => {
-    return a.split('_').length - b.split('_').length;
+    return a.split(sep).length - b.split(sep).length;
   });
   // filter
   keys = keys.filter(key => {
@@ -32,7 +34,7 @@ export function cascadeExtend(
   scope: object,
   source: object | undefined,
   prefix?: string,
-  sep: string = '_',
+  sep: string = __SepDefault,
 ): object | undefined {
   if (!source) return undefined;
   // keys

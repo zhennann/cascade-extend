@@ -7,7 +7,7 @@ const scope = {
   view: true,
 };
 const source = {
-  ebParams_mobile: {
+  'ebParams.mobile': {
     size: 'small',
     scene: 'mobile',
     group: true,
@@ -17,19 +17,19 @@ const source = {
     scene: 'pc',
     name: 'yang',
   },
-  ebParams_pc: {
+  'ebParams.pc': {
     size: 'large',
     scene: 'pc',
     name: 'kevin_pc',
     group: true,
   },
-  ebParams_mobile_view: {
+  'ebParams.mobile.view': {
     name: 'kevin_mobile_view',
   },
-  ebParams_view: {
+  'ebParams.view': {
     name: 'kevin_view',
   },
-  ebParams_pc_view: {
+  'ebParams.pc.view': {
     size: 'large',
     scene: 'pc',
   },
